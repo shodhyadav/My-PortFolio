@@ -28,8 +28,8 @@ const Landing = () => {
   return (
     <>
       {/* Hero Section */}
-      <header className="flex flex-col items-center justify-center text-center h-118">
-      <div className="flex flex-col items-center text-center px-4 sm:px-8 lg:px-16  mx-auto">
+      <header className="flex flex-col items-center justify-center text-center ">
+      <div className="flex flex-col items-center leading-tight text-center px-4 sm:mt-14 sm:px-8 lg:px-16  mx-auto">
       {/* Animated Heading */}
       <motion.h2
         className="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight"
@@ -54,16 +54,16 @@ const Landing = () => {
         efficient and innovative solutions that solve real-world problems.
       </motion.p>
     </div>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto mt-7">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mx-4 w-full max-w-lg mt-7">
           <Button to="/about">About</Button>
           <Button to="/skills">Skills</Button>
           <Button to="/projects">Projects</Button>
-          <Button>Education</Button>
+          <Button to="/education">Education</Button>
         </div>
       </header>
 
       {/* Contact Section */}
-      <section id="contact" className="p-12 bg-gray-800 text-center">
+      <section id="contact" className="p-12 bg-gray-800 text-center lg:mt-20 md:mt-5 mt-5">
         <h3 className="text-3xl font-semibold mb-4">Get in Touch</h3>
         <div className="flex justify-center gap-6 text-2xl">
           <a

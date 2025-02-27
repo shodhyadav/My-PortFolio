@@ -61,7 +61,7 @@ const projects = [
 
 const ProjectCard = ({ title, company, onClick }) => {
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg rounded-lg p-6 m-4 w-full md:w-full lg:w-full cursor-pointer hover:shadow-2xl transition-transform transform hover:scale-105" onClick={onClick}>
+    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg rounded-lg p-6 my-4 s:mx-2 w-full md:w-full lg:w-full cursor-pointer hover:shadow-2xl transition-transform transform hover:scale-105" onClick={onClick}>
       <h2 className="text-2xl font-bold mb-2">{title}</h2>
       {company && <h4 className="text-lg font-semibold">({company})</h4>}
     </div>
@@ -104,7 +104,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section className=" py-12 px-4 md:px-12">
+    <section className=" py-12 md:px-12">
       <div className=" mx-auto">
         <h1 className="text-5xl font-bold text-center text-white-900 mb-8">Projects</h1>
         {projects.map((project, index) => (
