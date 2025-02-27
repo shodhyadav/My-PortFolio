@@ -1,4 +1,4 @@
-import img from "../assets/bg.jpg";
+import img from "../assets/profile.JPG";
 import { Link } from "react-router-dom";
 const About = () => {
   return (

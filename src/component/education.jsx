@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const educationData = [
   {
     institution: "Babu Banarasi Das University",
@@ -22,7 +22,7 @@ const educationData = [
   },
 ];
 const Education=()=>{
-    return (
+    return (<>
         <section className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
           <h1 className="text-4xl sm:text-5xl font-bold text-white-900 mb-8 text-center">Education</h1>
           <div className="w-full max-w-4xl space-y-6">
@@ -42,6 +42,12 @@ const Education=()=>{
             ))}
           </div>
         </section>
+        <Link to="/">
+        <button className="mb-10 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6  rounded-xl shadow-lg hover:scale-110 transition transform duration-300 ease-in-out hover:shadow-xl">
+          <span className="flex items-center gap-2 font-semibold text-lg">
+            Home
+          </span>
+        </button></Link></>
       );
 }
 export default Education;

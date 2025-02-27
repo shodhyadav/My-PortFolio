@@ -1,6 +1,7 @@
 import dark from "../assets/dark.jpg"
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -20,19 +21,40 @@ const projects = [
     ]
   },
   {
+    title: "My PortFolio (React + Vite + Tailwind + Node.js )",
+    description: [
+      "Fully Responsive Design: Adapts seamlessly to different screen sizes (desktop, tablet, mobile).",
+      "Dynamic Project Showcase: Displays project details with animations and modal pop-ups.",
+      "Smooth Animations: Uses Framer Motion for elegant transitions and hover effects.",
+      "Social Media Links: Connects to GitHub, LinkedIn, and other platforms for networking.",
+      "Tech Stack Highlight: Displays skills and technologies using interactive UI elements.",
+      "Github : https://github.com/shodhyadav/My-PortFolio"
+    ]
+  },
+  {
+    title: "SNIP level validation in EDI files (JavaScript)",
+    description: [
+      "Syntax Validation: Checks the basic structure, segment order, required fields, and delimiters in the EDI file.",
+      "Semantic Validation: Ensures proper data types, value formats, and segment relationships.",
+      "Balancing Validation: Validates financial transactions by checking that total amounts match line-item sums.",
+      "Code Set Validation: Ensures that all code values comply with standard EDI guidelines (e.g., ICD, CPT, NPI codes).",
+      "Implementation Guide-Specific Rules: Validates transactions against custom implementation guidelines."
+    ]
+  },
+  {
     title: "JSON to EDI Converter (JavaScript)",
     description: [
-      "Lightning-Fast Conversion – Optimized JavaScript logic ensures rapid and accurate JSON to EDI transformation.",
-      "Seamless Integration – Easily integrates with existing systems to automate EDI processing.",
-      "Customizable & Scalable – Adaptable to different EDI formats and scalable for growing data needs.",
-      "Github:"
+      "Lightning-Fast Conversion : Optimized JavaScript logic ensures rapid and accurate JSON to EDI transformation.",
+      "Seamless Integration : Easily integrates with existing systems to automate EDI processing.",
+      "Customizable & Scalable : Adaptable to different EDI formats and scalable for growing data needs.",
+      "Github : https://github.com/shodhyadav/Json2edi"
     ]
   },
   {
     title: "EDI File Size Increaser (JavaScript)",
     description: [
-      "Customizable Expansion – Allows flexible adjustments based on business and compliance needs.",
-      "Github:"
+      "Customizable Expansion : Allows flexible adjustments based on business and compliance needs.",
+      "Github : https://github.com/shodhyadav/edi_size_increase"
     ]
   },
   {
@@ -41,20 +63,27 @@ const projects = [
       "Seamless Scheduling – Effortlessly book, reschedule, or cancel appointments with real-time availability.",
       "Automated Reminders – Reduce no-shows with SMS and email notifications for upcoming appointments.",
       "Secure & Scalable – Ensures patient data privacy while supporting multiple clinics and doctors.",
-      "Github: ",
-      "https://github.com/shodhyadav/Doctor_Appointment_System"
+      "Github: https://github.com/shodhyadav/Doctor_Appointment_System"
     ]
   },
   {
-    title: "Cab Booking Service (Angular+Spring Boot+MySQL+Git+Github)",
+    title: "Cab Booking Service (Angular + Spring Boot + MySQL + Git + Github)",
     description: [
       "User-Friendly Interface – Intuitive and responsive design for a seamless booking experience.",
       "24/7 Availability – Book a ride anytime, anywhere, with instant confirmations.",
       "Multiple Ride Options – Choose from economy, premium, or shared rides to suit your needs.",
-      "Github Frontend: ",
-      "https://github.com/shodhyadav/cab_services_frontend",
-      "Github Backend: ",
-      "https://github.com/shodhyadav/Cab_services_server"
+      "Github Frontend: https://github.com/shodhyadav/cab_services_frontend",
+      "Github Backend: https://github.com/shodhyadav/Cab_services_server"
+    ]
+  },
+  {
+    title: "Online Car Rental System (HTML + CSS + JavaScript + PHP + MySQL)",
+    description: [
+      "User Authentication: Secure login and registration for customers and admins.",
+      "Car Listings: Displays available cars with images, descriptions, and pricing.",
+      "Admin Dashboard: Manage car inventory, bookings, users, and payments.",
+      "Responsive Design: Works smoothly on desktop and mobile devices.",
+      "Github : https://github.com/shodhyadav/Online_Car_Rental"
     ]
   }
 ];
@@ -103,7 +132,7 @@ const Modal = ({ project, onClose }) => {
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  return (
+  return (<>
     <section className=" py-12 md:px-12">
       <div className=" mx-auto">
         <h1 className="text-5xl font-bold text-center text-white-900 mb-8">Projects</h1>
@@ -113,6 +142,12 @@ const Projects = () => {
         {selectedProject && <Modal project={selectedProject} onClose={() => setSelectedProject(null)} />}
       </div>
     </section>
+    <Link to="/">
+    <button className="mb-10 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6  rounded-xl shadow-lg hover:scale-110 transition transform duration-300 ease-in-out hover:shadow-xl">
+      <span className="flex items-center gap-2 font-semibold text-lg">
+        Home
+      </span>
+    </button></Link></>
   );
 };
 export default Projects;
